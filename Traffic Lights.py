@@ -1,4 +1,4 @@
-from multiprocessing import Process 	#Load a library called "multiprocessing" and import the commands from "Process"
+from multiprocessing import Process 			#Load a library called "multiprocessing" and import the commands from "Process"
 import sys						#Import the "sys" commands
 import RPi.GPIO as GPIO					#Import the "RPi.GPIO" commands that allow us to utilise the pins on the RaspberryPi
 import time						#Import the ability to use .time commands
