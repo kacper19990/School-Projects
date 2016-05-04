@@ -30,7 +30,7 @@ def Right():						#Create a definition that makes it easy to load up all the com
 	time.sleep(5)					#LED turns on for 5 seconds
 	GPIO.output(17,GPIO.Low)			#Turns off the LED
 	GPIO.setup(22,GPIO.OUT)				#Set the 22nd pin as an output (Orange)
-	GPIO.setup(22,GPIO.High)			#Turns on the LED that is connected to the pin
+	GPIO.setup(22,GPIO.High)				#Turns on the LED that is connected to the pin
 	time.sleep(2)					#LED turns on for 2 seconds
 	GPIO.setup(22,GPIO.Low)				#Turns off the LED
 	pass
