@@ -1,0 +1,95 @@
+print("Hello World")
+#This prints whatever is inside the brackets
+#You always need to put brackets around your command, otherwise it will not work
+
+Variable_a = 25
+#This sets your variable to be of value 25, you can set this as a anything
+Variable_b = "Duck"
+#A variable can also be a string
+
+#Let's put those two things we learned into action.
+print(Variable_a)
+#Running this in a console will output 25, because this function prints out the value of Variable_a
+print(Variable_b)
+#This will print out Duck, as our Variable_b is set to print out a string Duck
+
+pri€€nt(Variable_a + Variable_b)
+#Combining two variables gives us a combination of the two values. If we were to run this command we would get 25Duck.
+
+Variable_c = Variable_a + Variable_b
+#It is easy to assign a new variable by just assigning the value of two or more variables to a new one
+
+print(Variable_c)
+#This prints out 25Duck, the same as print(Variable_a + Variable_b)
+
+import time
+#Importing a module contains methods, difinitions and classes. We will create a module later on.
+import time as T
+#If we want to shorten our module we use "as" after the name of the module as shown above.
+
+Current_time = time.time()
+Current_T = T.time()
+#The two variables shown above both have the same function and contain the same value.
+
+print(Current_T)
+#Printing our variable would return something along the lines of "1479159014.109". This doesn't look like our standard time at all.
+#This is because .time() function return the amount of seconds passed from "the Unix Epoch" i.e 12:00am January 1, 1970.
+#This is a date you might've come across on your phone if you did a factory reset.
+
+print(time.localtime())
+#This prints the current time in a more readable format. "tm_year=2016, tm_mon=11, tm_mday=14, tm_hour=21, tm_min=35, tm_sec=51, tm_wday=0, tm_yday=319, tm_isdst=0)"
+#You might be wondering what tm_wday, tm_yday, and tm_isdst are.
+#Well tm_wday is the weekday. Monday being 0 and Sunday being 6. tm_yday is the day of the year, and tm_isdst check if it's Daylight Saving Time.
+#But it's still quite difficult to read. We want to get rid of all the "tm_year=" etc.
+print(time.asctime(time.localtime))
+#Now this is a readable format for once. "'Mon Nov 14 21:36:14 2016'". We came a long way from the amount of seconds since the Unix Epoch to this.
+#You might also have seen that I have put a function inside a function. The fuction asc.time cleans up our time.localtime into a nice format.
+time.sleep(5)
+#Most of you met time.sleep by now. It creates a pause of x seconds, and then goes onto the next function.
+
+def Current_time:
+#Say we want to create a quick comman that give us the current date and time.
+#We can create a definition to do so. It works similarly to a function, but a definition contains a couple definitions and can contain variables.
+    import time as T
+    time = T.asctime(T.localtime)
+    print(time)
+
+Current_time
+#As you can see we can now quickly recall the current time by just writing "Current_time" instead of a couple lines of code, or a long chain.
+
+from datetime import datetime as dt
+#We are importing the object "datetime" from a module "datetime" which contains a group of objects.
+#I want to shorten "datetime" so that it's quicker to write. I will use "dt" for this function.
+date = dt(2016, 2, 15, 13, 25)
+print(date)
+#This gives us a nice format in the form YYYY-MM-DD HH-MM-SS. So printing date gives us 2016-02-15 13:25:00
+
+print(dt.now())
+#This returns the current time and date in the same format as above.
+print(dt.today())
+#This prints the same as dt.now, but cannot be passed a tzinfo(timezone) argument. It is by default set to None
+
+from datetime import time
+#We are importing the object "time" from datetime. This is different to the previous .time objects that we used.
+t = time(5, 0, 55, 22222)
+print(t)
+#We are returned the following "05:00:55.022222"
+#The format for time in this case is "HH:MM:SS:Ms(Microsecond)"
+
+time.min == time(0 0,0,0)
+#This function returns the earliest time possible which is 12am or 00:00:00
+time.max == time(23,59,59,9999)
+#Similarly, the maximum time is a second before midnight or 23:59:59
+
+import datetime as dt
+d = dt.timedelta(days=1, hours=3)
+#we use timedelta to determine the time difference between two dates.
+#Here we specified that the time difference is 1 day and 3 hours.
+
+today = dt.datetime.today()
+#dt.datetime.today converts our YYYY-MM-DD HH-MM-SS into YYYY, MM, DD, HH, MM, SS
+#This allows the timedelta to determine what day it is today as HH:MM:SS is a string and it reads integers only.
+d = dt.timedelta(days=1)
+yesterday = today - d
+print(yesterday)
+#Now we determined what yesterday's date is. We substracted 1 day from today, giving us yesterday.
