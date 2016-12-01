@@ -93,3 +93,6 @@ d = dt.timedelta(days=1)
 yesterday = today - d
 print(yesterday)
 #Now we determined what yesterday's date is. We substracted 1 day from today, giving us yesterday.
+
+#Let's move on to classes.
+#Open the Classes Tutorial, which is in the directory.
